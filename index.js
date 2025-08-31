@@ -1,0 +1,47 @@
+module.exports = (req, res) => {
+  res.status(403).send(`
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - 禁止访问</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #6c757d;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>403</h1>
+        <p><strong>禁止访问</strong></p>
+        <p>您没有权限访问此资源。</p>
+        <p>如有疑问，请联系网站管理员。</p>
+    </div>
+</body>
+</html>
+  `);
+};
